@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    height: 100vh;
+    background: #495c6d no-repeat center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pf-kaart{
+    width: 400px;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.kaart-header{
+    background: #2c3a47;
+    padding: 50px 40px;
+}
+
+.pf{
+    display: inline-block;
+    padding: 4.2px;
+    background: linear-gradient(130deg, #2e2e2e, #ff1616);
+    margin: auto;
+    border-radius: 20%;
+    background-size: 200% 200%;
+    animation: animated-gradient 2s linear infinite;
+}
+
+@keyframes animated-gradient{
+    25%{
+        background-position: left bottom;
+    }
+    50%{
+        background-position: right bottom;
+    }
+    75%{
+        background-position: right top;
+    }
+    100%{
+        background-position: left top;
+    }
+}
+
+.pf img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 20%;
+}
+
+.naam{
+    color: #f2f2f2;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.pf-desc{
+    font-size: 18px;
+    color: #ff1616;
+    padding: 6px 0;
+}
+
+.desc{
+    margin: 10px;
+    padding: 15px 20px;
+    font-size: 13.4px;
+    color: #f2f2f2;
+    background: #495c6d;
+    border-radius: 5px;
+}
+
+.desc a{
+    color: blue;
+}
+
+.socials{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.socials a{
+    color: #2c3a47;
+    width: 56px;
+    font-size: 22px;
+    transition: .2s linear;
+}
+
+.socials a:hover{
+    color: #ff1616;
+}
+
+.kaart-footer{
+    display: none;
+    background: #f2f2f2;
+    padding: 20px 10px;
+}
+
+.kaart-footer.active{
+    display: block;
+}
+
+.pop-out{
+    padding-top: 4%;
+}
+
+.pop-out a{
+    display: block;
+    color: #f2f2f2;
+    font-size: 30px;
+    transition: .2s linear;
+}
+
+.pop-out a:hover{
+    color: #ff1616;
+}
+
+.pop-out a.active{
+    display: none;
+}
+
+.pop-out p{
+    font-size: 12px;
+    padding-top: 20px;
+    color: #f2f2f283;
+}
+
+.numbers{
+    display: flex;
+    align-items: center;
+}
+
+.item{
+    flex: 1;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #ff1616;
+
+}
+
+.item span{
+    display: block;
+    color: #2c3a47;
+    font-size: 30px;
+}
+
+#more{
+    display: none;
+}
+
+#read-moreless-btn{
+    border: none;
+    background: none;
+    color: blue;
+    padding: 5px;
+}
+
+@media (max-width: 450px){
+    .pf-kaart{
+        width:80%;
+    }
+    .kaart-header{
+        padding: 30px 20px;
+    }
+    .pf{
+        padding: 2.5px;
+    }
+    .pop-out a:hover{
+        color: #f2f2f2;
+    }
+    .socials a:hover{
+        color: #2c3a47;;
+    }
+}

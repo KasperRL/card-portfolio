@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profiel Kasper</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+</head>
+<body>
+    <div class="pf-kaart">
+        <div class="kaart-header">
+            <div class="pf">
+                <img src="images/pf.jpg" alt="">
+            </div>
+            <div class="naam">Kasper Ligthart</div>
+            <div class="pf-desc">Software Engineer</div>
+            <div class="desc">
+                <p>Ik ben Kasper en ik ben 16 jaar oud. Het afgelopen jaar ben ik<span class ="read-more" id="dots">...</span> <span id="more">erg geïnteresseerd geraakt in programmeren en ik wil dit graag doorzetten tot eventueel een beroep in de ICT. Zelf ben ik al veel bezig geweest met het aanpassen en creëren van scripts voor bijvoorbeeld FiveM, ik heb mij ook bezig gehouden met het bouwen van een website die hieronder te vinden is.</span></p>
+                <button onclick="readMore()" id="read-moreless-btn">Lees meer...</button>
+            </div>
+            <div class="pop-out">
+                <a href="#" class="fas fa-angle-down"></a>
+                <p>Copyright &copy; Kansper</p>
+            </div>
+        </div>
+        <div class="kaart-footer" id ="footer-id">
+            <div class="socials">
+                <a href="https://andersdenkenhelptdus.nl/" target="_blank" class="fas fa-project-diagram"></a>
+                <a href="https://github.com/KasperRL" target="_blank" class="fab fa-github"></a>
+                <a href="https://twitter.com/Dev_Kansper" target="_blank" class="fab fa-twitter"></a>
+                <a href="https://www.instagram.com/kasperligthart/" target="_blank" class="fab fa-instagram"></a>
+                <a href="http://kansper.com/" target="_blank" class="fas fa-project-diagram"></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        // pop-out functie
+        $(".pop-out a").click(function(){
+            $(this).toggleClass("fa-times");
+            $(".kaart-footer").toggleClass("active");
+        });
+        
+        // Functie voor "Lees meer"
+        function readMore() {
+            // vars
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("read-moreless-btn");
+        
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Lees meer...";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Lees minder...";
+                moreText.style.display = "inline";
+            }
+        }
+    </script>
+</body>
+</html>
